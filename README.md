@@ -1,6 +1,6 @@
-#MiddlemanApp Mobile Boilerplate with Susy, Compass, Slim
+#MiddlemanApp Mobile Boilerplate Template with Susy, Compass, Slim
 
-Based on the Mobile Boilerplate v.4.1.2 + unreleased changes. https://github.com/h5bp/mobile-boilerplate/tree/80e8c1fed48c19c40cf4c58e022b25ccbe1a542e
+Based on middleman-bower-template and the Mobile Boilerplate v.4.1.2 + unreleased changes. https://github.com/h5bp/mobile-boilerplate/tree/80e8c1fed48c19c40cf4c58e022b25ccbe1a542e
 
 ##Summary:
 
