@@ -1,5 +1,12 @@
 @import 'normalize';
 @import 'normalize-h5bp-styling';
 
-@import 'mixins';
 @import 'colors';
+@import 'mixins';
+
+
+// test the color mixin
+body {
+  background-color: c(body-bg);
+  color: c(body);
+}
