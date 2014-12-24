@@ -44,8 +44,13 @@ set :markdown_engine, :redcarpet
 
 # Reload the browser automatically whenever files change
 configure :development do
-  activate :livereload
+  activate :livereload, :host => 'localhost'
+  activate :directory_indexes
+  set :debug_assets, true
+  ::Slim::Engine.set_options :pretty => true
 end
+
+activate :autoprefixer
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -61,19 +66,27 @@ set :js_dir, 'js'
 set :images_dir, 'img'
 
 # Build-specific configuration
+
 configure :build do
-  # For example, change the Compass output style for deployment
+  # Use relative URLs
+  activate :directory_indexes
+
+  # Activate gzip
+  activate :gzip
+
+  # Minify CSS on build
   activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
+
+  # Add asset fingerprinting to avoid cache issues
+  activate :asset_hash
 
   # Enable cache buster
-  # activate :asset_hash
+  activate :cache_buster
 
-  # Use relative URLs
-  # activate :relative_assets
-
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
+  # Compress PNGs after build (First: gem install middleman-smusher)
+  require "middleman-smusher"
+  activate :smusher
 end

@@ -5,6 +5,11 @@
   @return map-get($colors, $the-color);
 }
 
+// returns a breakpoint from the $breakpoints map
+@function bp($the-breakpoint) {
+  @return map-get($breakpoints, $the-breakpoint);
+}
+
 // tint and shade based on Hotbot's Bourbon
 
 // Add percentage of white to a color

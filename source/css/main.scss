@@ -1,9 +1,16 @@
+@import 'susy';
+@import 'breakpoint';
+
 @import 'normalize';
 @import 'normalize-h5bp-styling';
 
+
+
 @import 'colors';
 @import 'mixins';
-
+@import 'settings';
+@import 'grid';
+@import 'nav';
 
 // test the color mixin
 body {

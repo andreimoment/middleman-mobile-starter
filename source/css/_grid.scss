@@ -1,0 +1,46 @@
+// grid layout
+
+#container {
+  // margin-top: $navbar-height;
+}
+
+#container, .nav-container {
+  outline: 1px solid green;
+
+  @include layout($susy-small, true);
+  @include container;
+  // @include show-grid(overlay);
+
+
+  @include breakpoint(bp(huge)) {
+    @include layout($susy-huge, true);
+    @include container;
+    // @include show-grid(overlay);
+  }
+}
+
+header, .full-width, footer {
+  @include span(12 of 12);
+  background-color: violet;
+}
+
+.left-column {
+  @include span(6 of 12);
+  background-color: orange;
+}
+
+.right-column {
+  @include span(last 6 of 12);
+  background-color: pink;
+}
+// .content-width {
+//   @include pre(1);
+//   @include span(10 of 12);
+//   @include post(1);
+
+//   @include breakpoint(bp(medium)) {
+//     @include pre(2);
+//     @include span(8 of 12);
+//     @include post(2);
+//   }
+// }

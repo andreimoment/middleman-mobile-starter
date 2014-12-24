@@ -1,0 +1,118 @@
+// settings
+
+// GRID -------------------------
+
+
+$susy: (
+  flow: ltr, // ltr | rtl
+  output: float, // float | isolate
+  math: fluid, // fluid | static (requires column-width)
+  column-width: 40px, // false | value
+  container: auto, // length or % | auto
+  container-position: center, // left | center | right | <length> [*2] (grid padding)
+  last-flow: to,
+  columns: 12,
+  gutters: 1,
+  gutter-position: after, // before | after | split | inside | inside-static (requires column-width)
+  global-box-sizing: content-box, // content-box | border-box (affects inside/inside-static)
+  debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: background, // background | overlay
+    toggle: top right,
+  ),
+  use-custom: (
+    background-image: true, // look for background-image mixin
+    background-options: false, // look for background-size, -origin and -clip and other compass/bourbon mixins
+    box-sizing: true, // look for custom bix sizing mixin
+    clearfix: false, // true = look for internal clearfix before using micro clearfix
+    rem: true, // look for rem mixin
+  )
+);
+
+
+$susy-small: (
+  container: 96%,
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+  global-box-sizing: border-box,
+  debug: (
+    image: show,
+    color: rgba(green, 0.3),
+    output: overlay,
+    toggle: top right,
+  ),
+  // use-custom: (clearfix: true),
+);
+
+$susy-huge: (
+  container: 1100px,
+  columns: 12,
+  column-width: 6em,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: split,
+  global-box-sizing: border-box,
+  debug: (
+    image: show,
+    color: rgba(orange,.3),
+    output: overlay,
+    toggle: top right,
+  ),
+  // use-custom: (clearfix: true),
+);
+
+
+
+
+$breakpoints: (
+  miniscule: 380px,
+  tiny: 450px,
+  below-small: 0px 739px,
+  small: 740px,
+  medium: 900px,
+  medium-small: 800px,
+  small-to-medium: 741px 899px,
+  large: 1024px,
+  large-1: 1023px,
+  huge: 1200px,
+  menu: 930px,
+);
+
+
+
+// $bp-miniscule: 380px;
+// $bp-tiny: 450px;
+// $bp-below-small: 0px 739px;
+// $bp-small: 740px;
+// $bp-medium: 900px;
+// $bp-medium-small: 800px; // for article titles
+// $bp-small-to-medium: #{$bp-small + 1px} #{$bp-medium - 1px};
+// $bp-large: 1024px;
+// $bp-large-1: 1023px;
+// $bp-huge: 1200px;
+
+// $bp-menu: 930px;
+
+// article panel height
+// $hero-height-tiny: 180px;
+// $hero-height-small: 225px;
+// $hero-height-huge: 322px;
+
+// $footer-logo-height-tiny: 150px;
+// $footer-logo-height-small: 190px;
+// $footer-logo-height-huge: 200px;
+
+// $ph-tiny: 280px; // photos only; the intro height adjusts to content.
+// $ph-small: 280px;
+// $ph-medium: 250px;
+// $ph-medium-small: 270px;
+// $ph-large: 280px;
+// $ph-large-taller: 320px;
+// $ph-huge: 280px;
+
+// $navbar-height: 65px;
