@@ -3,17 +3,31 @@
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="utf-8">
-        <title></title>
         <meta name="description" content="">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="cleartype" content="on">
 
-        <%= partial 'partials/mobile_related_head_stuff' %>
+        <meta property="og:title" content="Open Graph Title" />
+        <meta property="og:url" content="http://exact url of the page" />
+        <meta property="og:image" content="http://url of a 600x image" />
+
+        <title></title>
+
+        <!-- %= partial 'partials/mobile_related_head_stuff' % -->
 
         <!-- link rel="stylesheet" href="css/normalize.css" -->
-        <link rel="stylesheet" href="css/main.css">
+
+        <% if development? %>
+            <!-- weinre server http://www.broken-links.com/2013/06/28/remote-debugging-with-weinre/ -->
+            <!-- script src="http://172.16.161.147:8080/target/target-script-min.js#anonymous"></script -->
+        <% else %>
+            <!-- <style>/*inline-css CHANGE ../img TAGS*/</style> -->
+            <!-- inline css manually as the inliner breaks autoprefixer -->
+        <% end %>
+
+
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>

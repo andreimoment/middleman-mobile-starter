@@ -13,12 +13,11 @@ set :markdown_engine, :redcarpet
 # Reload the browser automatically whenever files change
 configure :development do
   @analytics_account = false
-  activate :livereload, :host => 'localhost'
-  # activate :livereload, :host => 'localhost', :apply_js_live => true, :apply_css_live => true
+  # activate :livereload, :host => 'localhost'
+  activate :livereload, :host => 'localhost', :apply_js_live => true, :apply_css_live => true
   activate :directory_indexes
-  set :debug_assets, true
-  # set :sass, :sourcemap => :inline, style: :nested
-  ::Slim::Engine.set_options :pretty => true
+  set :debug_assets, true       #do not compile assets on refresh when in dev mode
+  # ::Slim::Engine.set_options :pretty => true
 end
 
 config[:file_watcher_ignore] += [ /sass-cache/, /playground/,  /\.sublime/ ]
