@@ -84,35 +84,10 @@ $breakpoints: (
 );
 
 
-
-// $bp-miniscule: 380px;
-// $bp-tiny: 450px;
-// $bp-below-small: 0px 739px;
-// $bp-small: 740px;
-// $bp-medium: 900px;
-// $bp-medium-small: 800px; // for article titles
-// $bp-small-to-medium: #{$bp-small + 1px} #{$bp-medium - 1px};
-// $bp-large: 1024px;
-// $bp-large-1: 1023px;
-// $bp-huge: 1200px;
-
-// $bp-menu: 930px;
-
-// article panel height
-// $hero-height-tiny: 180px;
-// $hero-height-small: 225px;
-// $hero-height-huge: 322px;
-
-// $footer-logo-height-tiny: 150px;
-// $footer-logo-height-small: 190px;
-// $footer-logo-height-huge: 200px;
-
-// $ph-tiny: 280px; // photos only; the intro height adjusts to content.
-// $ph-small: 280px;
-// $ph-medium: 250px;
-// $ph-medium-small: 270px;
-// $ph-large: 280px;
-// $ph-large-taller: 320px;
-// $ph-huge: 280px;
-
-// $navbar-height: 65px;
+$layers: (
+  below: -1,
+  one: 100,
+  two: 200,
+  three: 300,
+  warnings: 1000,
+);

@@ -1,16 +1,23 @@
 @import 'susy';
 @import 'breakpoint';
+@import 'compass';
 
 @import 'normalize';
-@import 'normalize-h5bp-styling';
-
-
-
+@include global-box-sizing(border-box, true);
+// @import 'normalize-h5bp-styling';
+@import 'fonts';
 @import 'colors';
 @import 'mixins';
 @import 'settings';
+
 @import 'grid';
 @import 'nav';
+@import 'warnings';
+
+// @import 'magnific-popup';
+// @import 'hint';
+// @import 'svg-defs';
+// @import 'popups';
 
 // test the color mixin
 body {
