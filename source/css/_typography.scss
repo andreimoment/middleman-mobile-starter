@@ -1,0 +1,8 @@
+p {
+  @include ff(sans-serif);
+}
+
+p.serif {
+  @include ff(serif);
+
+}

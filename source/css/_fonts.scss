@@ -1,35 +1,18 @@
 // fonts
 
-// fonts are included via fonts.com
-// todo: pay for more pageviews prior to distribution
-
-// font-family:'TradeGothicNextW01-Ligh_693250';
-// font-family:'Trade Gothic Next W01';
-// font-family:'TradeGothicNextW01-Bold_693229';
-// font-family:'Sabon Next W01 Italic';
-// font-family:'TradeGothicW01-BoldCn20_675334';
-// font-family:'TradeGothicNextW01-Cond';
-
+// font-family: 'Playfair Display', serif;
+// font-family: 'Open Sans', sans-serif;
 
 @mixin ff($f) {
-  @if ($f == serif-italic) {
-    font-family: 'Sabon Next W01 Italic', serif-italic;
+  @if ($f == serif) {
+    font-family: 'Playfair Display', serif;
     font-weight: normal;
   } @else if ($f == sans-serif) {
-    font-family: 'Trade Gothic Next W01', sans-serif;
-    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
   } @else if ($f == sans-serif-bold) {
-    font-family: 'TradeGothicNextW01-Bold_693229', sans-serif;
-    font-weight: normal;
-  } @else if ($f == sans-serif-light) {
-    font-family: 'TradeGothicNextW01-Ligh_693250', sans-serif;
-    font-weight: normal;
-  } @else if ($f == sans-serif-cond) {
-    font-family:'TradeGothicNextW01-Cond', sans-serif;
-    font-weight: normal;
-  } @else if ($f == sans-serif-cond-bold) {
-    font-family: 'TradeGothicW01-BoldCn20_675334', sans-serif;
-    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
   } @else {
     font-family: times, serif;
     font-weight: normal;
