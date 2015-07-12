@@ -12,16 +12,18 @@
   // @include show-grid(overlay);
 
 
-  @include breakpoint(bp(huge)) {
+  @include breakpoint(bp(small)) {
     @include layout($susy-huge, true);
     @include container;
     // @include show-grid(overlay);
   }
+  @include clearfix;
 }
 
 header, .full-width, footer {
   @include span(12 of 12);
   background-color: violet;
+  @include clearfix;
 }
 
 .left-column {
@@ -33,6 +35,58 @@ header, .full-width, footer {
   @include span(last 6 of 12);
   background-color: pink;
 }
+
+// header
+
+header.main-header {
+  background: url(../img/bg/bg-header.jpg) no-repeat 0 0;
+  background-size: cover;
+  position: relative;
+  min-height: 348px;
+  @include clearfix;
+
+  h1 {
+    color: c(header-h1);
+    @include ff(serif);
+    font-weight: normal;
+    background-color: white;
+    padding: .2em .3em;
+    text-align: right;
+    position: absolute;
+    left: 0;
+    font-size: 3em;
+    bottom: 12%;
+    width: 70%;
+  }
+}
+
+footer.main-footer {
+  background: url(../img/bg/bg-footer.jpg) no-repeat 0 0;
+  background-size: cover;
+  position: relative;
+  min-height: 100px;
+
+  p {
+    color: c(header-h1);
+    @include ff(serif);
+    font-weight: normal;
+    background-color: white;
+    padding: .4em 1em .5em 1em;
+
+    font-size: 1.6em;
+    @include pre(4);
+    @include span(last 8);
+    margin-top: 1.1em;
+    margin-bottom: 1.1em;
+  }
+}
+
+section#main {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  // @include clearfix;
+}
+
 // .content-width {
 //   @include pre(1);
 //   @include span(10 of 12);
