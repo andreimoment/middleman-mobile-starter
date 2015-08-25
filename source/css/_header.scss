@@ -1,0 +1,22 @@
+header.main-header {
+  background: url(../img/bg/bg-header.jpg) no-repeat 0 0;
+  background-size: cover;
+  // position: relative;
+  min-height: 348px;
+  // @include span(last 12);
+
+
+  h1 {
+    color: c(header-h1);
+    @include ff(serif);
+    font-weight: normal;
+    background-color: white;
+    padding: .2em .3em;
+    text-align: right;
+    @include span(8);
+    @include post(last 4);
+    margin-left: 0;
+    font-size: 3em;
+    margin-top: 3.5em;
+  }
+}
