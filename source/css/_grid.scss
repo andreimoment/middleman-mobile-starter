@@ -53,6 +53,11 @@ section.main {
   font-size: 1.2em;
   @extend .clearfix;
 
+  @include breakpoint(0 bp(tiny)) {
+    font-size: 1em;
+  }
+
+
   &--title {
     font-weight: normal;
     letter-spacing: -1px;
@@ -65,6 +70,17 @@ section.main {
   &--col-3 {
     @include span(4 of 12);
     text-align: center;
+
+    & > li {
+      list-style: none;
+      padding-left: 0;
+      margin-left: 0;
+    }
+
+    @include breakpoint(0 bp(small)) {
+      @include span(12 of 12);
+      margin-top: 0; margin-bottom: 0;
+    }
   }
 
   &--contact {
@@ -87,11 +103,29 @@ section.main {
       // &:hover { filter: none; }
     }
 
+    @include breakpoint(0 bp(tiny)) {
+      @include span(5 of 12);
+    }
+
+
+
+    @include breakpoint(bp(tiny) bp(small)) {
+      @include span(4 of 12);
+    }
+
   }
 
   &--about-me--text {
     @include span(last 10 of 12);
     p { margin-top: 0;}
+
+    @include breakpoint(0 bp(tiny)) {
+      @include span(last 7 of 12);
+    }
+
+    @include breakpoint(bp(tiny) bp(small)) {
+      @include span(last 8 of 12);
+    }
   }
 
   &--locations {
