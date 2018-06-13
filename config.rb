@@ -26,17 +26,17 @@ set :css_dir, 'css'
 set :js_dir, 'js'
 set :images_dir, 'img'
 
-sprockets.append_path 'js/vendor'
-sprockets.append_path 'js/vendor/gs' #greensock
-sprockets.append_path 'js/lib'
+# sprockets.append_path 'js/vendor'
+# sprockets.append_path 'js/vendor/gs' #greensock
+# sprockets.append_path 'js/lib'
 
 activate :relative_assets
-activate :autoprefixer do |config|
-  config.browsers = ['last 3 versions', 'Explorer >= 11', 'Safari >= 6', 'iOS >= 7']
-  # config.cascade  = false
-  # config.inline   = true
-  # config.ignore   = ['hacks.css']
-end
+# activate :autoprefixer do |config|
+#   config.browsers = ['last 3 versions', 'Explorer >= 11', 'Safari >= 6', 'iOS >= 7']
+#   # config.cascade  = false
+#   # config.inline   = true
+#   # config.ignore   = ['hacks.css']
+# end
 
 ignore "img/sprites/source-*/*"
 ignore "img/sprites/*.mustache"

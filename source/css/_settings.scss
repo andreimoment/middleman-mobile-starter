@@ -39,12 +39,12 @@ $susy-small: (
   output: float,
   gutter-position: inside,
   global-box-sizing: border-box,
-  debug: (
-    image: show,
-    color: rgba(green, 0.3),
-    output: overlay,
-    toggle: top right,
-  ),
+  // debug: (
+  //   image: show,
+  //   color: rgba(green, 0.3),
+  //   output: overlay,
+  //   toggle: top right,
+  // ),
   // use-custom: (clearfix: true),
 );
 
@@ -57,12 +57,12 @@ $susy-huge: (
   output: float,
   gutter-position: split,
   global-box-sizing: border-box,
-  debug: (
-    image: show,
-    color: rgba(orange,.3),
-    output: overlay,
-    toggle: top right,
-  ),
+  // debug: (
+  //   image: show,
+  //   color: rgba(orange,.3),
+  //   output: overlay,
+  //   toggle: top right,
+  // ),
   // use-custom: (clearfix: true),
 );
 
@@ -72,8 +72,10 @@ $susy-huge: (
 $breakpoints: (
   miniscule: 380px,
   tiny: 450px,
+  below-smaller: 0px 580px,
   below-small: 0px 739px,
-  small: 740px,
+  smaller: 600px,
+  small: 780px,
   medium: 900px,
   medium-small: 800px,
   small-to-medium: 741px 899px,

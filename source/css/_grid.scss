@@ -1,11 +1,7 @@
 // grid layout
 
-#container {
-  // margin-top: $navbar-height;
-}
 
 #container, .nav-container {
-  // outline: 1px solid green;
 
   @include layout($susy-small, true);
   @include container;
@@ -17,12 +13,11 @@
     @include container;
     // @include show-grid(overlay);
   }
-  // @include clearfix;
-  @extend .clearfix;
+  @include susy-clearfix;
 }
 
 header, .full-width, footer {
-  @include span(12 of 12);
+  @include span(full);
   // width:100%;
 }
 
@@ -64,12 +59,22 @@ section.main {
     font-size: 1.9em;
     text-align: center;
     color: c(main);
-    line-height: 1;
+    line-height: 1.2;
+
+    @include breakpoint(bp(small)) {
+      width: span(8 of 12);
+      margin-left: auto; margin-right: auto;
+      font-size: 2.1em;
+    }
   }
 
   &--col-3 {
-    @include span(4 of 12);
+
+    padding-left: 0;
+
+    @include span(full);
     text-align: center;
+    margin-top: 0; margin-bottom: 0;
 
     & > li {
       list-style: none;
@@ -77,25 +82,37 @@ section.main {
       margin-left: 0;
     }
 
-    @include breakpoint(0 bp(small)) {
-      @include span(12 of 12);
-      margin-top: 0; margin-bottom: 0;
+    @include breakpoint(bp(small)) {
+      margin-top: 1em; margin-bottom: 1em;
+      @include span(4 of 12);
     }
   }
 
-  &--contact {
+  &--payment, &--contact {
     clear:both;
-    padding: 1.5em 0;
+    // padding-bottom: 0  0;
   }
 
   &--about-me {
     // clear:both;
   }
 
+  &--about-me--title  {
+    text-align: center;
+
+    @include susy-breakpoint(bp(smaller)) {
+      text-align: left;
+      @include span(last 9 of 12);
+    }
+
+    @include susy-breakpoint(bp(small)) {
+      text-align: left;
+      @include span(last 10 of 12);
+    }
+
+  }
+
   &--about-me--photo {
-    @include span(2 of 12);
-    padding-right: 1em;
-    padding-top: .4em;
     img {
       max-width: 100%;
       border-radius: 50%;
@@ -103,35 +120,98 @@ section.main {
       // &:hover { filter: none; }
     }
 
-    @include breakpoint(0 bp(tiny)) {
-      @include span(5 of 12);
+    text-align: center;
+    max-width: 120px;
+    margin: 0 auto;
+
+    @include susy-breakpoint(bp(smaller)) {
+      max-width: 140px;
+      @include span(3 of 12);
+      padding-right: 1em;
+      padding-top: 2em;
+    }
+
+    @include susy-breakpoint(bp(small)) {
+      max-width: 140px;
+      @include span(2 of 12);
+      padding-right: 1em;
+      padding-top: 2em;
     }
 
 
-
-    @include breakpoint(bp(tiny) bp(small)) {
-      @include span(4 of 12);
-    }
 
   }
 
   &--about-me--text {
-    @include span(last 10 of 12);
-    p { margin-top: 0;}
 
-    @include breakpoint(0 bp(tiny)) {
-      @include span(last 7 of 12);
+    @include breakpoint(bp(smaller)) {
+      @include span(last 9 of 12);
+    }
+    @include breakpoint(bp(small)) {
+      @include span(last 10 of 12);
     }
 
-    @include breakpoint(bp(tiny) bp(small)) {
-      @include span(last 8 of 12);
-    }
   }
 
   &--locations {
     // clear: both;
     // @include container;
     padding: 1em 0;
+
+    text-align: center;
+
+
+
+    &__info {
+
+      margin-left: auto;
+      margin-right: auto;
+      @include clearfix;
+
+
+      width: span(8 of 12);
+
+
+      &__col1 {
+
+        display: inline-block;
+        clear: both;
+        margin: 0 auto;
+
+
+        @include breakpoint(bp(small)) {
+          text-align: left;
+          clear: initial;
+          display: block;
+          @include span(4 of 8);
+        }
+      }
+      &__col2 {
+
+        display: inline-block;
+        clear: both;
+        margin: 0 auto;
+
+        @include breakpoint(bp(small)) {
+          text-align: left;
+          clear: initial;
+          display: block;
+          @include span(last 4 of 8);
+        }
+      }
+
+    }
+
   }
 
 }
+
+h2.section {
+      clear: both;
+      width: 70%;
+      margin-left: auto; margin-right: auto;
+      padding: .4em 0;
+      text-align: center;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+    }
